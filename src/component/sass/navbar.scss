@@ -1,0 +1,133 @@
+$Desaturated-Red: hsl(0, 36%, 70%);
+$Soft-Red: hsl(0, 93%, 68%);
+$Dark-Grayish-Red: hsl(0, 6%, 24%);
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body,
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.head {
+    display: none;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    .text-banner {
+        padding: 3rem 10rem;
+        // background-color: black;
+        img {
+            padding-bottom: 50px;
+        }
+        .pink {
+            color: $Desaturated-Red;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 4rem;
+            letter-spacing: 10px;
+        }
+        .black {
+            color: $Dark-Grayish-Red;
+            text-transform: uppercase;
+            font-size: 4rem;
+            font-weight: 600;
+            letter-spacing: 10px;
+        }
+        p {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: $Desaturated-Red;
+            font-size: 16px;
+            line-height: 20px;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            input {
+                padding: 15px 50px;
+                border-radius: 20px;
+                border: 1px solid $Desaturated-Red;
+                position: relative;
+                outline: none;
+                &::placeholder {
+                    color: $Desaturated-Red;
+                }
+            }
+            a {
+                border-radius: 20px;
+                padding: 15px 25px;
+                position: absolute;
+                margin: auto;
+                color: #fff;
+                left: 380px;
+                background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+                text-decoration: none;
+            }
+        }
+    }
+    .hero {
+        background-image: url(../images/hero-desktop.jpg);
+        background-size: contain;
+        width: 100%;
+        background-position-x: right;
+        height: 100vh;
+        background-repeat: no-repeat;
+        >img {
+            display: none;
+        }
+    }
+}
+
+// RESPONSIVE MOBILE 
+@media (max-width:520px) {
+    .head {
+        display: flex;
+        height: 60px;
+        padding: 20px;
+        // display: initial;
+        width: 100%;
+        align-items: center;
+        // justify-content: space-between;
+        img {
+            width: 30%;
+            // margin: 0 auto;
+        }
+    }
+    .banner {
+        flex-direction: column-reverse;
+        // justify-content: center;
+        .text-banner {
+            text-align: center;
+            >img {
+                display: none;
+            }
+            padding: 20px;
+            .btn {
+                justify-content: center;
+                a {
+                    left: 280px;
+                    // margin: auto;
+                }
+            }
+        }
+        .hero {
+            background-image: none;
+            height: 40vh;
+            >img {
+                display: initial;
+                width: 100%;
+            }
+        }
+    }
+}
+
+// MOBILE RESPONSIVE ENDS 

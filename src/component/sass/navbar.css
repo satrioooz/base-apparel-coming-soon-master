@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
+* {
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+body,
+html {
+  font-family: 'Josefin Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+.head {
+  display: none;
+}
+
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.banner .text-banner {
+  padding: 3rem 10rem;
+}
+
+.banner .text-banner img {
+  padding-bottom: 50px;
+}
+
+.banner .text-banner .pink {
+  color: #ce9797;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 4rem;
+  letter-spacing: 10px;
+}
+
+.banner .text-banner .black {
+  color: #413a3a;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 10px;
+}
+
+.banner .text-banner p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #ce9797;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.banner .text-banner .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.banner .text-banner .btn input {
+  padding: 15px 50px;
+  border-radius: 20px;
+  border: 1px solid #ce9797;
+  position: relative;
+  outline: none;
+}
+
+.banner .text-banner .btn input::-webkit-input-placeholder {
+  color: #ce9797;
+}
+
+.banner .text-banner .btn input:-ms-input-placeholder {
+  color: #ce9797;
+}
+
+.banner .text-banner .btn input::-ms-input-placeholder {
+  color: #ce9797;
+}
+
+.banner .text-banner .btn input::placeholder {
+  color: #ce9797;
+}
+
+.banner .text-banner .btn a {
+  border-radius: 20px;
+  padding: 15px 25px;
+  position: absolute;
+  margin: auto;
+  color: #fff;
+  left: 380px;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  text-decoration: none;
+}
+
+.banner .hero {
+  background-image: url(../images/hero-desktop.jpg);
+  background-size: contain;
+  width: 100%;
+  background-position-x: right;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.banner .hero > img {
+  display: none;
+}
+
+@media (max-width: 520px) {
+  .head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60px;
+    padding: 20px;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .head img {
+    width: 30%;
+  }
+  .banner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .banner .text-banner {
+    text-align: center;
+    padding: 20px;
+  }
+  .banner .text-banner > img {
+    display: none;
+  }
+  .banner .text-banner .btn {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .banner .text-banner .btn a {
+    left: 280px;
+  }
+  .banner .hero {
+    background-image: none;
+    height: 40vh;
+  }
+  .banner .hero > img {
+    display: initial;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=navbar.css.map */
